@@ -1,0 +1,117 @@
+@backgroundColor: #fffff6;
+@backgroundCalculate: RGB(154,161,172);
+@fontPrincipal: 'Inter', sans-serif;
+@fontTitle: 'Bebas Neue', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap');
+
+
+body {
+    background-color: @backgroundColor;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+
+    .calculateImc{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: @backgroundCalculate;
+        width: 400px;
+        height: 600px;
+        padding: 15px 30px;
+        border-radius: 20px;
+        box-shadow: 5px 22px 5px -8px rgba(0,0,0,0.68);
+
+        .text{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 100px;
+            gap: 30px;
+        }
+
+        h1 {
+            font-family: @fontTitle;
+            color: #fff;
+            font-size: 2.4rem;
+        }
+
+        form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            input{
+                width: 350px;
+                height: 30px;
+                padding: 10px;
+                border-radius: 6px;
+                background-color: transparent;
+                border: 1px solid #c6c6c6;
+                outline: none;
+                margin-bottom: 20px;
+                font-size: 1.2rem;
+                color: #fffff6;
+            }
+            label{
+                font-family: @fontPrincipal; 
+                font-size: 1.3rem; 
+                color: #d8d8d8;
+                margin-right: 150px;
+                margin-bottom: 15px;
+            }
+            .buttonCalculate {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 40px;
+                
+
+                button {
+                    width: 160px;
+                    height: 46px;
+                    padding: 6px;
+                    font-size: 1.1rem;
+                    border-radius: 4px;
+                    border: none;
+                    cursor: pointer;
+                    color: #ffffff;
+
+                }
+                .calculateBtn{
+                    background-color: rgb(180, 0, 0);
+                }
+                .clearBtn{
+                    background-color: #707070;
+                }
+            }
+            .result{
+                background-color: rgb(146, 146, 146);
+                margin-top: 50px;
+                width: 200px;
+                padding: 6px;
+                border: none;
+                border-radius: 10px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.2rem;
+                font-family: @fontPrincipal;
+                font-weight: bold;
+                text-transform: uppercase;
+                gap: 5px;
+               
+            }
+        }
+    }
+}
